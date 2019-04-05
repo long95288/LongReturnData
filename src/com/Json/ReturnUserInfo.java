@@ -41,12 +41,12 @@ public class ReturnUserInfo extends HttpServlet {
 		// doGet(request, response);
 		response.setContentType("text/html;charset=utf-8");
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
-//		response.getWriter().println("</br>ÄãÌá½»ÁËÒ»¸ögetÇëÇó£¡");
-		/** ÉèÖÃÏìÓ¦Í·ÔÊĞíajax¿çÓò·ÃÎÊ **/
+//		response.getWriter().println("</br>ä½ æäº¤äº†ä¸€ä¸ªgetè¯·æ±‚ï¼");
+		/** è®¾ç½®å“åº”å¤´å…è®¸ajaxè·¨åŸŸè®¿é—® **/
 		response.addHeader("Access-Control-Allow-Origin","http://127.0.0.1:8020");
-		/* ĞÇºÅ±íÊ¾ËùÓĞµÄÒìÓòÇëÇó¶¼¿ÉÒÔ½ÓÊÜ£¬ */
+		/* æ˜Ÿå·è¡¨ç¤ºæ‰€æœ‰çš„å¼‚åŸŸè¯·æ±‚éƒ½å¯ä»¥æ¥å—ï¼Œ */
 		response.setHeader("Access-Control-Allow-Methods", "GET,POST");
-//		//»ñµÃÊä³öÁ÷
+//		//è·å¾—è¾“å‡ºæµ
 		
 		PrintWriter out=response.getWriter();
 		
@@ -54,16 +54,16 @@ public class ReturnUserInfo extends HttpServlet {
 		System.out.println(uid);
 		if (uid.equals("12345678")) {
 			JSONObject userinfo = new JSONObject();
-			userinfo.put("name", "·ÉÓã");
+			userinfo.put("name", "é£é±¼");
 			userinfo.put("account", "11876234@qq.com");
 			userinfo.put("headimg", "http://111.231.133.229:8888/long/document/77ed8bfaecbf87df0f2093708dcf487c.jpg");
-			userinfo.put("qq", "ÎŞ");
+			userinfo.put("qq", "æ— ");
 			userinfo.put("tel", "13444124567");
 			userinfo.put("email", "333@qq.com");
 			userinfo.put("version", "V1.3");
 			out.print(userinfo);
 		}else {
-			// ·µ»Ø505
+			// è¿”å›505
 			response.sendError(505);
 		}
 		

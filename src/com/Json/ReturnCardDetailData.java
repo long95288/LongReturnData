@@ -43,10 +43,10 @@ public class ReturnCardDetailData extends HttpServlet {
 		// doGet(request, response);
 		response.setContentType("text/html;charset=utf-8");
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
-//		response.getWriter().println("</br>ÄãÌá½»ÁËÒ»¸ögetÇëÇó£¡");
-		/** ÉèÖÃÏìÓ¦Í·ÔÊĞíajax¿çÓò·ÃÎÊ **/
+//		response.getWriter().println("</br>ä½ æäº¤äº†ä¸€ä¸ªgetè¯·æ±‚ï¼");
+		/** è®¾ç½®å“åº”å¤´å…è®¸ajaxè·¨åŸŸè®¿é—® **/
 		response.addHeader("Access-Control-Allow-Origin","http://127.0.0.1:8020");
-		/* ĞÇºÅ±íÊ¾ËùÓĞµÄÒìÓòÇëÇó¶¼¿ÉÒÔ½ÓÊÜ£¬ */
+		/* æ˜Ÿå·è¡¨ç¤ºæ‰€æœ‰çš„å¼‚åŸŸè¯·æ±‚éƒ½å¯ä»¥æ¥å—ï¼Œ */
 		response.setHeader("Access-Control-Allow-Methods", "GET,POST");
 		
 		String cardid = request.getParameter("cardid");
@@ -55,8 +55,8 @@ public class ReturnCardDetailData extends HttpServlet {
 		
 		PrintWriter out=response.getWriter();
 		JSONObject object = new JSONObject();
-		JSONArray markerlist = new JSONArray(); // ±ê×¢ÁĞ±í
-		JSONArray commentlist =new JSONArray();	// ÆÀÂÛÁĞ±í
+		JSONArray markerlist = new JSONArray(); // æ ‡æ³¨åˆ—è¡¨
+		JSONArray commentlist =new JSONArray();	// è¯„è®ºåˆ—è¡¨
 		JSONObject list =new JSONObject();
 		
 		
@@ -64,21 +64,21 @@ public class ReturnCardDetailData extends HttpServlet {
 		object.put("id", "#1234560.4655868980862685");
 		object.put("longitude", "0.2100994609896647");
 		object.put("latitude", "0.2100994609896647");
-		object.put("html", "±ê×¢1");
-		object.put("content", "Õâ¸ö±ê×¢ÊÇ´Ó·şÎñÆ÷·µ»ØµÄ");
+		object.put("html", "æ ‡æ³¨1");
+		object.put("content", "è¿™ä¸ªæ ‡æ³¨æ˜¯ä»æœåŠ¡å™¨è¿”å›çš„");
 		markerlist.add(object);
 		object.put("id", "1234560.9134885568897888");
 		object.put("longitude", "5.918010743903802");
 		object.put("latitude", "0.40867581689927324");
-		object.put("html", "±ê×¢2");
-		object.put("content", "Õâ¸ö±ê×¢ÊÇ´Ó·şÎñÆ÷·µ»ØµÄ");
+		object.put("html", "æ ‡æ³¨2");
+		object.put("content", "è¿™ä¸ªæ ‡æ³¨æ˜¯ä»æœåŠ¡å™¨è¿”å›çš„");
 		
 		markerlist.add(object);
 		list.put("marklist", markerlist);
 		
-		list.put("img", "http://111.231.133.229:8888/long/document/show2.jpg");// Ìí¼ÓÍ¼Æ¬url
+		list.put("img", "http://111.231.133.229:8888/long/document/show2.jpg");// æ·»åŠ å›¾ç‰‡url
 		
-		list.put("caption", "Bryce Canyon National Park <b>&copy; Mark Doliner</b>"); //Í¼Æ¬ÃèÊö
+		list.put("caption", "Bryce Canyon National Park <b>&copy; Mark Doliner</b>"); //å›¾ç‰‡æè¿°
 		
 		list.put("comments", commentlist);
 		

@@ -34,15 +34,15 @@ public class ReturnJsonData extends HttpServlet {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		try {
-			/*½â¾öÂÒÂëÎÊÌâ*/
+			/*è§£å†³ä¹±ç é—®é¢˜*/
 			response.setContentType("text/html;charset=utf-8");
 //			response.getWriter().append("Served at: ").append(request.getContextPath());
-//			response.getWriter().println("</br>ÄãÌá½»ÁËÒ»¸ögetÇëÇó£¡");
-			/** ÉèÖÃÏìÓ¦Í·ÔÊĞíajax¿çÓò·ÃÎÊ **/
+//			response.getWriter().println("</br>ä½ æäº¤äº†ä¸€ä¸ªgetè¯·æ±‚ï¼");
+			/** è®¾ç½®å“åº”å¤´å…è®¸ajaxè·¨åŸŸè®¿é—® **/
 			response.addHeader("Access-Control-Allow-Origin","http://127.0.0.1:8020");
-			/* ĞÇºÅ±íÊ¾ËùÓĞµÄÒìÓòÇëÇó¶¼¿ÉÒÔ½ÓÊÜ£¬ */
+			/* æ˜Ÿå·è¡¨ç¤ºæ‰€æœ‰çš„å¼‚åŸŸè¯·æ±‚éƒ½å¯ä»¥æ¥å—ï¼Œ */
 			response.setHeader("Access-Control-Allow-Methods", "GET,POST");
-//			//»ñµÃÊä³öÁ÷
+//			//è·å¾—è¾“å‡ºæµ
 			
 			PrintWriter out=response.getWriter();
 			//JSONObject json=JsonReader.receivePost(request);
@@ -52,28 +52,28 @@ public class ReturnJsonData extends HttpServlet {
 			JSONObject slider=new JSONObject();
 	
 
-			//Ğ´JSONÊı¾İ
+			//å†™JSONæ•°æ®
 			slider.put("id", "firstpage");
 			slider.put("img", "headimg/jiuzhouicon.jpg");
-			slider.put("content", "µÚÒ»ÕÅ");
+			slider.put("content", "ç¬¬ä¸€å¼ ");
 			sliderlist.add(slider);
 			
-			//Ğ´JSONÊı¾İ
+			//å†™JSONæ•°æ®
 			slider.put("id", "secondtpage");
 			slider.put("img", "headimg/lushan.jpg");
-			slider.put("content", "µÚ¶şÕÅ");
+			slider.put("content", "ç¬¬äºŒå¼ ");
 			sliderlist.add(slider);
 			
-			//Ğ´JSONÊı¾İ
+			//å†™JSONæ•°æ®
 			slider.put("id", "thirdtpage");
 			slider.put("img", "headimg/zhumulangmafeng.jpg");
-			slider.put("content", "µÚÈıÕÅ");
+			slider.put("content", "ç¬¬ä¸‰å¼ ");
 			sliderlist.add(slider);
 			
-			//Ğ´JSONÊı¾İ
+			//å†™JSONæ•°æ®
 			slider.put("id", "forthpage");
 			slider.put("img", "headimg/wuyihsan.jpg");
-			slider.put("content", "µÚËÄÕÅ");
+			slider.put("content", "ç¬¬å››å¼ ");
 			sliderlist.add(slider);
 			
 			servedata.put("sliderlist", sliderlist);
@@ -83,22 +83,22 @@ public class ReturnJsonData extends HttpServlet {
 			
 			card.put("id", "huangsan");
 			card.put("logo", "headimg/huangsanicon.jpg");
-			card.put("name", "°²»Õ»ÆÉ½");
-			card.put("intro", "ÊÀ½çÎÄ»¯Óë×ÔÈ»Ë«ÖØÒÅ²ú£¬ÊÀ½çµØÖÊ¹«Ô°£¬¹ú¼ÒAAAAA¼¶ÂÃÓÎ¾°Çø");
+			card.put("name", "å®‰å¾½é»„å±±");
+			card.put("intro", "ä¸–ç•Œæ–‡åŒ–ä¸è‡ªç„¶åŒé‡é—äº§ï¼Œä¸–ç•Œåœ°è´¨å…¬å›­ï¼Œå›½å®¶AAAAAçº§æ—…æ¸¸æ™¯åŒº");
 			card.put("imgs", "showimg/huangshow1.jpg");
 			cardlist.add(card);
 			
 			card.put("id", "jiuzhou");
 			card.put("logo", "headimg/jiuzhouicon.jpg");
-			card.put("name", "¹ãÎ÷¾ÉÖİ");
-			card.put("intro", "¾ÉÖİ¹ÅÃûÄÇÇ©¡¢Ë³°²á¼¡¢¹éË³ÍÁÖİ£¬Î»ÓÚ¾¸Î÷ÏØ³ÇÄÏ9¹«Àï£¬¾ÉÖİ--Ô­Îª¹éË³Öİ£¨½ñ¾¸Î÷£©");
+			card.put("name", "å¹¿è¥¿æ—§å·");
+			card.put("intro", "æ—§å·å¤åé‚£ç­¾ã€é¡ºå®‰å³’ã€å½’é¡ºåœŸå·ï¼Œä½äºé–è¥¿å¿åŸå—9å…¬é‡Œï¼Œæ—§å·--åŸä¸ºå½’é¡ºå·ï¼ˆä»Šé–è¥¿ï¼‰");
 			card.put("imgs", "showimg/jiuzhoushow1.jpg");
 			cardlist.add(card);
 			
 			card.put("id", "hukou");
 			card.put("logo", "showimg/hukoushow3.jpg");
-			card.put("name", "ºø¿ÚÆÙ²¼");
-			card.put("intro", "ºø¿ÚÆÙ²¼ÊÇ¹ú¼Ò¼¶·ç¾°ÃûÊ¤Çø£¬¹ú¼ÒAAAA¼¶ÂÃÓÎ¾°Çø ¡£Î÷ÁÙÉÂÎ÷Ê¡ÑÓ°²ÊĞÒË´¨ÏØºø¿ÚÏç£¬¶«±ôÉ½Î÷Ê¡ÁÙ·ÚÊĞ¼ªÏØºø¿ÚÕò£¬ÎªÁ½Ê¡¹²ÓĞÂÃÓÎ¾°Çø¡£");
+			card.put("name", "å£¶å£ç€‘å¸ƒ");
+			card.put("intro", "å£¶å£ç€‘å¸ƒæ˜¯å›½å®¶çº§é£æ™¯åèƒœåŒºï¼Œå›½å®¶AAAAçº§æ—…æ¸¸æ™¯åŒº ã€‚è¥¿ä¸´é™•è¥¿çœå»¶å®‰å¸‚å®œå·å¿å£¶å£ä¹¡ï¼Œä¸œæ¿’å±±è¥¿çœä¸´æ±¾å¸‚å‰å¿å£¶å£é•‡ï¼Œä¸ºä¸¤çœå…±æœ‰æ—…æ¸¸æ™¯åŒºã€‚");
 			card.put("imgs", "showimg/hukoushow2.jpg");
 			cardlist.add(card);
 
@@ -108,11 +108,11 @@ public class ReturnJsonData extends HttpServlet {
 			System.out.println(servedata);
 //			
 			
-//			json.put("username", "ÀîÃ÷");
-//			json.put("ÃÜÂë", "12345678");
-//			json.put("ÃèÊö", "http://192.168.1.103:8080/documment/upload/show2.jpg");			
+//			json.put("username", "ææ˜");
+//			json.put("å¯†ç ", "12345678");
+//			json.put("æè¿°", "http://192.168.1.103:8080/documment/upload/show2.jpg");			
 			//jsonArray.add(json);			
-//			//Êä³öjson
+//			//è¾“å‡ºjson
 //			out.print(json);
 //			
 //			System.out.println(json);

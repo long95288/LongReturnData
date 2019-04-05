@@ -39,21 +39,21 @@ public class AddMarkerApi extends HttpServlet {
 		// TODO Auto-generated method stub
 		// doGet(request, response);
 		response.setContentType("text/html;charset=utf-8");
-		/** 设置响应头允许ajax跨域访问 **/
+		/** 璁剧疆鍝嶅簲澶村厑璁竌jax璺ㄥ煙璁块棶 **/
 		response.addHeader("Access-Control-Allow-Origin","http://127.0.0.1:8020");
-		/* 星号表示所有的异域请求都可以接受， */
+		/* 鏄熷彿琛ㄧず鎵�鏈夌殑寮傚煙璇锋眰閮藉彲浠ユ帴鍙楋紝 */
 		response.setHeader("Access-Control-Allow-Methods", "GET,POST");
 		
 		String cardid = request.getParameter("cardid");
 		System.out.println("cardid"+cardid);
 		
 		String marker = request.getParameter("marker");
-		System.out.println("标注:"+marker);
+		System.out.println("鏍囨敞:"+marker);
 		
 		
 		JSONObject redata = new JSONObject();
 		
-		redata.put("detail", "你获得了详情");
+		redata.put("detail", "浣犺幏寰椾簡璇︽儏");
 		
 		response.getWriter().print(redata);
 		

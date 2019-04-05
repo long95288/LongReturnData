@@ -36,12 +36,12 @@ public class getMark extends HttpServlet {
 		
 		response.setContentType("text/html;charset=utf-8");
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
-//		response.getWriter().println("</br>ÄãÌá½»ÁËÒ»¸ögetÇëÇó£¡");
-		/** ÉèÖÃÏìÓ¦Í·ÔÊĞíajax¿çÓò·ÃÎÊ **/
+//		response.getWriter().println("</br>ä½ æäº¤äº†ä¸€ä¸ªgetè¯·æ±‚ï¼");
+		/** è®¾ç½®å“åº”å¤´å…è®¸ajaxè·¨åŸŸè®¿é—® **/
 		response.addHeader("Access-Control-Allow-Origin","http://127.0.0.1:8020");
-		/* ĞÇºÅ±íÊ¾ËùÓĞµÄÒìÓòÇëÇó¶¼¿ÉÒÔ½ÓÊÜ£¬ */
+		/* æ˜Ÿå·è¡¨ç¤ºæ‰€æœ‰çš„å¼‚åŸŸè¯·æ±‚éƒ½å¯ä»¥æ¥å—ï¼Œ */
 		response.setHeader("Access-Control-Allow-Methods", "GET,POST");
-//		//»ñµÃÊä³öÁ÷
+//		//è·å¾—è¾“å‡ºæµ
 		
 		PrintWriter out=response.getWriter();
 		JSONObject object = new JSONObject();
@@ -53,13 +53,13 @@ public class getMark extends HttpServlet {
 		object.put("id", "#1234560.4655868980862685");
 		object.put("longitude", "0.2100994609896647");
 		object.put("latitude", "0.2100994609896647");
-		object.put("html", "·½·¨");
-		object.put("content", "¸ñÊ½¸ñÊ½µÄ");
+		object.put("html", "æ–¹æ³•");
+		object.put("content", "æ ¼å¼æ ¼å¼çš„");
 		array.add(object);
 		object.put("id", "1234560.9134885568897888");
 		object.put("longitude", "5.918010743903802");
 		object.put("latitude", "0.40867581689927324");
-		object.put("html", "·½·¨2");
+		object.put("html", "æ–¹æ³•2");
 		object.put("content", "33");
 		
 		array.add(object);

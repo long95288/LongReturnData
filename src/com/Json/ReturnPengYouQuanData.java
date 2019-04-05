@@ -47,7 +47,7 @@ public class ReturnPengYouQuanData extends HttpServlet {
 		JSONObject item = new JSONObject();
 		
 		item.put("headimg", "http://111.231.133.229:8888/long/document/77ed8bfaecbf87df0f2093708dcf487c.jpg");
-		item.put("name", "小二");
+		item.put("name", "灏忎簩");
 		item.put("dtime", "2016-06-03 15:30");
 		item.put("id", "show1");
 		item.put("img", "http://111.231.133.229:8888/long/document/show1.jpg");
@@ -57,7 +57,7 @@ public class ReturnPengYouQuanData extends HttpServlet {
 		cardlist.add(item);
 		
 		item.put("headimg", "http://111.231.133.229:8888/long/document/d7e1b8292160dba5d1262233dfaf1234.jpg");
-		item.put("name", "小李");
+		item.put("name", "灏忔潕");
 		item.put("dtime", "2016-06-03 15:30");
 		item.put("id", "show2");
 		item.put("img", "http://111.231.133.229:8888/long/document/show2.jpg");
