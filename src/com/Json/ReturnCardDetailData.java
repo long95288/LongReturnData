@@ -57,6 +57,7 @@ public class ReturnCardDetailData extends HttpServlet {
 		JSONObject object = new JSONObject();
 		JSONArray markerlist = new JSONArray(); // 标注列表
 		JSONArray commentlist =new JSONArray();	// 评论列表
+		JSONObject comment = new JSONObject();
 		JSONObject list =new JSONObject();
 		
 		
@@ -78,7 +79,27 @@ public class ReturnCardDetailData extends HttpServlet {
 		
 		list.put("img", "http://111.231.133.229:8888/long/document/show2.jpg");// 添加图片url
 		
-		list.put("caption", "Bryce Canyon National Park <b>&copy; Mark Doliner</b>"); //图片描述
+		list.put("caption", "黄石家公园 <b>&copy; Mark Doliner</b>"); //图片描述
+		
+		/*id:12345678|0.6563985603573026
+		content:刚刚说个事
+		ctime:2019-3-4 18:40:31*/
+		// 配置评论列表
+		comment.put("id", "12345678|0.6563985603573026");
+		comment.put("headimg", "http://111.231.133.229:8888/long/document/77ed8bfaecbf87df0f2093708dcf487c.jpg");
+		comment.put("name", "李四");
+		comment.put("ctime","2019-3-4 18:40:31");
+		comment.put("content", "这里真的很不错");
+		commentlist.add(comment);
+		
+		comment.put("id", "12345678|0.6563985603574455");
+		comment.put("headimg", "http://111.231.133.229:8888/long/document/d7e1b8292160dba5d1262233dfaf1234.jpg");
+		comment.put("name", "小李");
+		comment.put("ctime","2019-3-4 18:22:1");
+		comment.put("content", "我也觉得不错");
+		commentlist.add(comment);
+		
+		//
 		
 		list.put("comments", commentlist);
 		
