@@ -62,17 +62,21 @@ public class ReturnCardDetailData extends HttpServlet {
 		
 		
 		
-		object.put("id", "#1234560.4655868980862685");
+		object.put("id", "#12345678|0.3883952778974027");
 		object.put("longitude", "0.2100994609896647");
 		object.put("latitude", "0.2100994609896647");
 		object.put("html", "标注1");
 		object.put("content", "这个标注是从服务器返回的");
+		object.put("color", "green");
 		markerlist.add(object);
-		object.put("id", "1234560.9134885568897888");
+		object.put("id", "#12345678|0.16888147256620556");
 		object.put("longitude", "5.918010743903802");
 		object.put("latitude", "0.40867581689927324");
 		object.put("html", "标注2");
 		object.put("content", "这个标注是从服务器返回的");
+		object.put("color", "blue");
+		
+		
 		
 		markerlist.add(object);
 		list.put("marklist", markerlist);
